@@ -1,0 +1,91 @@
+---
+import { Image } from "astro:assets";
+import image1 from "../../content/servizi/example.png";
+const image1Alt = "";
+---
+
+<div class="overflow-hidden bg-white py-24 sm:py-32" id="certificazioni">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div
+      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    >
+      <div class="lg:ml-auto lg:pt-4 lg:pl-4">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base/7 font-semibold text-sky-600">
+            Deploy faster
+          </h2>
+          <p
+            class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+          >
+            Le abilitazioni che fanno la differenza per la tua azienda
+          </p>
+          <p class="mt-6 text-lg/8 text-gray-600">
+            Nel nostro settore, l'esperienza conta, ma la legge non ammette
+            ignoranza. Per questo ho investito per ottenere le massime
+            certificazioni disponibili, che mi permettono di operare dove molti
+            idraulici o elettricisti generici devono fermarsi.
+          </p>
+          <dl
+            class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none"
+          >
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+                <svg
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  data-slot="icon"
+                  aria-hidden="true"
+                  class="absolute top-1 left-1 size-5 text-sky-600"
+                >
+                  <path
+                    d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"></path>
+                </svg>
+                Certificazione F-GAS (Categoria I)
+              </dt>
+              <dd class="inline">
+                Non un semplice patentino base. La mia certificazione (Impresa e
+                Persona) mi abilita a operare su qualsiasi circuito frigorifero,
+                indipendentemente dalla quantità di gas contenuta. Che sia un
+                piccolo frigo bar o una centrale frigorifera industriale, posso
+                intervenire, ricercare perdite e ricaricare il gas nel pieno
+                rispetto delle normative europee.
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+                <svg
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  data-slot="icon"
+                  aria-hidden="true"
+                  class="absolute top-1 left-1 size-5 text-sky-600"
+                >
+                  <path
+                    d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"></path>
+                </svg>
+                Certificazione SIERT e Responsabile Tecnico
+              </dt>
+              <dd class="inline">
+                Qui sta la vera differenza. Molti tecnici possono operare solo
+                sul residenziale. Io sono abilitato come Responsabile Tecnico
+                anche per impianti termici e di climatizzazione superiori ai
+                10/12 kW.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <div class="flex items-start justify-end lg:order-first">
+        <Image
+          src={image1}
+          alt={image1Alt}
+          class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228"
+        />
+      </div>
+    </div>
+  </div>
+</div>

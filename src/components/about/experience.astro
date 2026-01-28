@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import image1 from "../../content/servizi/example.png";
+const image1Alt = "";
+---
+
+<div class="overflow-hidden bg-white py-24 sm:py-32" id="esperienza">
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <div class="max-w-4xl">
+      <p class="text-base/7 font-semibold text-sky-600">Esperienza</p>
+      <h2
+        class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+      >
+        Non sono il classico "tuttofare"
+      </h2>
+      <p class="mt-6 text-xl/8 text-balance text-gray-700">
+        Ho iniziato il mio percorso nel mondo degli impianti termici ed
+        elettrici, ma ho capito presto che la mia vera vocazione era la
+        refrigerazione tecnica. Mentre il mercato si riempiva di installatori di
+        condizionatori domestici ed elettricisti tutto-fare, io ho scelto una
+        strada diversa, più difficile ma più gratificante: studiare il cuore
+        delle macchine.
+      </p>
+      <p class="mt-8 text-base/7 text-gray-600">
+        Ho deciso di specializzarmi nei circuiti frigoriferi complessi – quelli
+        che tengono in piedi ristoranti, macellerie e industrie – perché lì non
+        si può improvvisare. Se si ferma uno split in salotto è un fastidio, se
+        si ferma una cella frigo è un danno economico.
+      </p>
+      <p class="mt-8 text-base/7 text-gray-600">
+        Oggi, a Figline Valdarno e in tutta la Toscana, sono il tecnico a cui le
+        aziende si rivolgono quando cercano competenza specifica, non tentativi.
+        Mi piace parlare chiaro: <strong
+          >pochi giri di parole e molta operatività.</strong
+        >
+      </p>
+    </div>
+
+    <section class="">
+      <div class="pt-16 lg:-mr-16 xl:mr-auto">
+        <Image
+          src={image1}
+          alt={image1Alt}
+          class="rounded-xl xl:rounded-l-xl"
+        />
+      </div>
+    </section>
+  </div>
+</div>

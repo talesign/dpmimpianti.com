@@ -1,0 +1,31 @@
+---
+import "../styles/global.css";
+import Hero from "../components/fgas-siert/hero.astro";
+import Regulations from "../components/fgas-siert/regulations.astro";
+import FgasSiert from "../components/fgas-siert/fgas-siert.astro";
+import Why from "../components/fgas-siert/why.astro";
+import Offer from "../components/fgas-siert/offer.astro";
+import Layout, { type LayoutProps } from "../components/layout.astro";
+const props: LayoutProps = {
+  content: {
+    title: "",
+    url: "/normative-manutenzione-fgas-siert",
+    description: "",
+    ogTitle: "",
+    ogType: "website",
+    ogDescription: "",
+    ogImage: "",
+    twitterTitle: "",
+    twitterDescription: "",
+    twitterImage: "",
+  },
+};
+---
+
+<Layout content={props.content}>
+  <Hero />
+  <Regulations />
+  <FgasSiert />
+  <Why />
+  <Offer />
+</Layout>

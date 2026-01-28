@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+import Hero from "../components/kronoterm/hero.astro";
+import Partner from "../components/kronoterm/partner.astro";
+import Layout, { type LayoutProps } from "../components/layout.astro";
+import Contact from "../components/kronoterm/contact.astro";
+const props: LayoutProps = {
+  content: {
+    title: "",
+    url: "/centro-assistenza-ricambi-kronotherm",
+    description: "",
+    ogTitle: "",
+    ogType: "website",
+    ogDescription: "",
+    ogImage: "",
+    twitterTitle: "",
+    twitterDescription: "",
+    twitterImage: "",
+  },
+};
+---
+
+<Layout content={props.content}>
+  <Hero />
+  <Partner />
+  <Contact />
+</Layout>

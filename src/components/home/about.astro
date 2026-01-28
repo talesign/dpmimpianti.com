@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import { type Link } from "../../utils";
+
+type PartnerKronotermContent = {
+  label: string;
+  title: string;
+  description: string;
+  button: Link;
+};
+
+const content: PartnerKronotermContent = {
+  label: "Assistenza e ricambi Kronoterm",
+  title: "Centro assistenza autorizzato e ricambi Kronoterm",
+  description:
+    "Sei un installatore o un privato e cerchi assistenza ufficiale in Toscana? Sono il partner di riferimento per le Pompe di Calore Kronoterm. Fornisco interventi in garanzia e pezzi di ricambio originali.",
+  button: {
+    label: "Vai all'assistenza Kronoterm",
+    link: "/centro-assistenza-ricambi-kronotherm",
+  },
+};
+
+import image from "../../content/servizi/example.png";
+const imageAlt = "";
+---

@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+#bodycopy {
+  @apply max-w-xl text-base/7 text-gray-600 lg:col-span-7;
+}
+
+#bodycopy p {
+  @apply mt-8;
+}
+
+#bodycopy h2 {
+  @apply mt-16 text-2xl font-bold tracking-tight text-gray-900;
+}
+
+#bodycopy ul {
+  @apply mt-8 max-w-xl space-y-4 text-gray-600 list-disc ml-5;
+}
+
+#bodycopy ul li {
+  @apply marker:text-sky-500;
+}

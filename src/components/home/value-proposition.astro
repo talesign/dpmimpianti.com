@@ -1,0 +1,74 @@
+---
+import { type FeatureItem } from "../../utils";
+import { KeyIcon, UsersIcon, WrenchIcon } from "@heroicons/react/24/outline";
+
+export type HomeValuePropositionContent = {
+  title: string;
+  description: string;
+  features: FeatureItem[];
+};
+
+// Value proposition content
+const content: HomeValuePropositionContent = {
+  title: "Non chiamare un call center. Chiama un tecnico.",
+  description:
+    "Nel nostro lavoro il tempo è denaro, specialmente quando hai una cella piena di merce che sta salendo di temperatura. Mi chiamo Mirco Del Piano e ho scelto di specializzarmi nella refrigerazione perché è un lavoro che non ammette improvvisazione. Non mando stagisti: quando chiami, parli con chi verrà a farti il lavoro.",
+  features: [
+    {
+      icon: KeyIcon,
+      title: "Abilitato per grandi impianti",
+      description:
+        "Dimentica i limiti dei tecnici standard. Sono certificato SIERT e FGAS per operare legalmente sia su piccoli climatizzatori che su impianti industriali sopra i 10KW. Un solo tecnico per tutta la tua azienda.",
+    },
+    {
+      icon: WrenchIcon,
+      title: "Specialista del freddo",
+      description:
+        "Non faccio un po' di tutto. Mi occupo di circuiti frigoriferi. Se la tua cella non fredda o il banco perde acqua, so esattamente dove mettere le mani per salvare la tua merce.",
+    },
+    {
+      icon: UsersIcon,
+      title: "Vicino a te, davvero",
+      description:
+        "Opero principalmente a Figline, nel Valdarno, a Firenze Sud e Arezzo. Essere locali significa arrivare prima ed evitare costi di trasferta assurdi.",
+    },
+  ],
+};
+---
+
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2
+        class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+      >
+        {content.title}
+      </h2>
+      <p class="mt-6 text-lg/8 text-gray-600">{content.description}</p>
+    </div>
+    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+      <dl
+        class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3"
+      >
+        {
+          content.features.map((feature) => (
+            <div class="flex flex-col">
+              <dt class="text-base/7 font-semibold text-gray-900">
+                <div class="mb-6 flex size-10 items-center justify-center rounded-lg bg-sky-600">
+                  <feature.icon
+                    aria-hidden="true"
+                    className="size-6 text-white"
+                  />
+                </div>
+                {feature.title}
+              </dt>
+              <dd class="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
+                <p class="flex-auto">{feature.description}</p>
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </div>
+</div>

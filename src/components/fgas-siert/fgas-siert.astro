@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import image1 from "../../content/certificazione-fgas.jpg";
+const image1Alt = "Certificazione FGAS";
+import image2 from "../../content/certificazione-siert.png";
+const image2Alt = "Certificazione SIERT";
+---
+
+<section class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-2xl text-center pb-16">
+    <p class="text-base/7 font-semibold text-sky-600">
+      Pilastri della manutenzione
+    </p>
+    <h2
+      class="mt-2 text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl"
+    >
+      I regolamenti
+    </h2>
+  </div>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div
+      class="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    >
+      <div class="flex flex-col pb-10 sm:pb-16 lg:pr-8 lg:pb-0 xl:pr-20">
+        <Image
+          src={image1}
+          alt={image1Alt}
+          class="self-start h-48 object-contain"
+        />
+        <figure class="mt-10 flex flex-auto flex-col justify-between">
+          <blockquote class="text-lg/8 text-gray-900">
+            <h3 class="font-semibold">Normativa F-GAS (gas refrigeranti)</h3>
+            <p>
+              È obbligatoria per legge su tutte le apparecchiature che
+              contengono gas fluorurati a effetto serra (in base alle tonnellate
+              di CO2 equivalente). Per questa normativa eseguo il controllo
+              periodico delle perdite con cercafughe elettronico certificato e
+              registro l'intervento sulla Banca Dati Nazionale FGAS. Senza
+              questa registrazione telematica, il controllo è carta straccia.
+            </p>
+          </blockquote>
+        </figure>
+      </div>
+      <div
+        class="flex flex-col border-t border-gray-900/10 pt-10 sm:pt-16 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-8 xl:pl-20"
+      >
+        <Image
+          src={image2}
+          alt={image2Alt}
+          class="self-start h-48 object-contain"
+        />
+        <figure class="mt-10 flex flex-auto flex-col justify-between">
+          <blockquote class="text-lg/8 text-gray-900">
+            <h3 class="font-semibold">Normativa SIERT (regione Toscana)</h3>
+            <p>
+              In Toscana, per impianti di climatizzazione e pompe di calore con
+              potenza utile superiore ai 10/12 kW, è obbligatorio il Libretto di
+              Impianto e il controllo di efficienza energetica. Per questa
+              normativa eseguo la verifica rendimento, sicurezza e compilazione
+              del Rapporto di Controllo di Efficienza Energetica (RCEE). Poi
+              inserisco i dati sul portale SIERT (CIT - Catasto Impianti
+              Termici) e pago per te il bollino regionale. Essendo abilitato
+              come Responsabile Tecnico, posso firmare legalmente questi
+              documenti.
+            </p>
+          </blockquote>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>

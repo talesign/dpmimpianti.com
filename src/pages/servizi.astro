@@ -1,0 +1,24 @@
+---
+import Hero from "../components/services/hero.astro";
+import "../styles/global.css";
+import Layout, { type LayoutProps } from "../components/layout.astro";
+
+const props: LayoutProps = {
+  content: {
+    title: "",
+    url: "/servizi",
+    description: "",
+    ogTitle: "",
+    ogType: "website",
+    ogDescription: "",
+    ogImage: "",
+    twitterTitle: "",
+    twitterDescription: "",
+    twitterImage: "",
+  },
+};
+---
+
+<Layout content={props.content}>
+  <Hero />
+</Layout>

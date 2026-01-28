@@ -1,17 +1,40 @@
 ---
+import "../styles/global.css";
+import Layout, { type LayoutProps } from "../components/layout.astro";
+import Hero from "../components/home/hero.astro";
+import ValueProposition from "../components/home/value-proposition.astro";
+import ServicesListing from "../components/services-listing.astro";
+import PartnerKronoterm from "../components/home/partner-kronoterm.astro";
+import About from "../components/home/about.astro";
+import Bodycopy from "../components/home/bodycopy.astro";
 
+const props: LayoutProps = {
+  content: {
+    title: "",
+    url: "/",
+    description: "",
+    ogTitle: "",
+    ogType: "website",
+    ogDescription: "",
+    ogImage: "",
+    twitterTitle: "",
+    twitterDescription: "",
+    twitterImage: "",
+  },
+};
+
+const servicesListingTitle = "Di cosa hai bisogno oggi?";
+const servicesListingDescritpion = "Tutti i servizi che offro nello specifico.";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout content={props.content}>
+  <Hero />
+  <ValueProposition />
+  <ServicesListing
+    title={servicesListingTitle}
+    description={servicesListingDescritpion}
+  />
+  <PartnerKronoterm />
+  <About />
+  <Bodycopy />
+</Layout>

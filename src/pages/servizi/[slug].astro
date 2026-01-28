@@ -1,0 +1,69 @@
+---
+import "../../styles/global.css";
+import { getCollection, render } from "astro:content";
+import Hero from "../../components/single-service/hero.astro";
+import Intro from "../../components/single-service/intro.astro";
+import Bodycopy from "../../components/single-service/bodycopy.astro";
+import Repairs from "../../components/single-service/repairs.astro";
+import Cta from "../../components/single-service/cta.astro";
+import Layout, { type LayoutProps } from "../../components/layout.astro";
+
+export async function getStaticPaths() {
+  const services = await getCollection("servizi");
+  return services.map((service) => ({
+    params: { slug: service.data.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+const { Content } = await render(service);
+
+const props: LayoutProps = {
+  content: {
+    title: "",
+    url: "/servizi",
+    description: "",
+    ogTitle: "",
+    ogType: "website",
+    ogDescription: "",
+    ogImage: "",
+    twitterTitle: "",
+    twitterDescription: "",
+    twitterImage: "",
+  },
+};
+---
+
+<Layout content={props.content}>
+  <Hero
+    title={service.data.title}
+    description={service.data.listDescription}
+    image={service.data.listImage}
+    imageAlt={service.data.listImageAlt}
+  />
+  <Intro
+    title={service.data.introTitle}
+    description={service.data.introDescription}
+  />
+  <Repairs
+    label={service.data.repairsLabel}
+    title={service.data.repairsTitle}
+    description={service.data.repairsDescription}
+    list={service.data.repairsList}
+    commonProblems={service.data.repairsCommonProblems}
+    image={service.data.repairsImage}
+  />
+  <Cta
+    label={service.data.ctaLabel}
+    title={service.data.ctaTitle}
+    description={service.data.ctaDescription}
+    image={service.data.ctaImage}
+  />
+  <Bodycopy
+    title={service.data.bodyTitle}
+    label={service.data.bodyLabel}
+    description={service.data.bodyDescription}
+    cta={service.data.bodyCta}><Content /></Bodycopy
+  >
+</Layout>

@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+import Layout, { type LayoutProps } from "../components/layout.astro";
+import Hero from "../components/about/hero.astro";
+import Bodycopy from "../components/about/experience.astro";
+import Certifications from "../components/about/certifications.astro";
+import Mission from "../components/about/mission.astro";
+
+const props: LayoutProps = {
+  content: {
+    title: "",
+    url: "/chi-sono",
+    description: "",
+    ogTitle: "",
+    ogType: "website",
+    ogDescription: "",
+    ogImage: "",
+    twitterTitle: "",
+    twitterDescription: "",
+    twitterImage: "",
+  },
+};
+---
+
+<Layout content={props.content}>
+  <Hero />
+  <Bodycopy />
+  <Certifications />
+  <Mission />
+</Layout>
