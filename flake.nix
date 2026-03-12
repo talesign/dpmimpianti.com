@@ -23,11 +23,12 @@
           prettier
         ];
         shellHook = ''
-          if [ -z "$TMUX" ]; then
-            tmux set-option -g default-command "nix develop --command zsh"
-            tmux new-session -s dpmimpianti -d 'nvim' \; new-window
-            tmux attach-session -t dpmimpianti
-          fi
+          echo "DPM impianti dev env"
+          # if [ -z "$TMUX" ]; then
+          #   tmux set-option -g default-command "nix develop --command zsh"
+          #   tmux new-session -s dpmimpianti -d 'nvim' \; new-window
+          #   tmux attach-session -t dpmimpianti
+          # fi
         '';
       };
     };

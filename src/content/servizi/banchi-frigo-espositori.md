@@ -16,7 +16,7 @@ repairsList:
     - title: "Bar e pasticcerie"
       description: "Vetrine espositive verticali, banchi pozzetto, vetrine refrigerate per torte e semifreddi."
     - title: "Gastronomie e macellerie"
-      description: "Banchi vendita assistita."
+      description: "Banchi vendita assistita"
 repairsCommonProblems:
     - Il banco non raggiunge la temperatura (o ci mette troppo tempo).
     - Motore rumoroso o che vibra (fastidioso per la clientela).
