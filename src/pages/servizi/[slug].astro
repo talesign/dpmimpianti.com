@@ -21,16 +21,16 @@ const { Content } = await render(service);
 
 const props: LayoutProps = {
   content: {
-    title: "",
-    url: "/servizi",
-    description: "",
-    ogTitle: "",
+    title: service.data.title,
+    url: `/servizi/${service.data.slug}`,
+    description: service.data.listDescription,
+    ogTitle: service.data.title,
     ogType: "website",
-    ogDescription: "",
-    ogImage: "",
-    twitterTitle: "",
-    twitterDescription: "",
-    twitterImage: "",
+    ogDescription: service.data.listDescription,
+    ogImage: service.data.listImage.src,
+    twitterTitle: service.data.title,
+    twitterDescription: service.data.listDescription,
+    twitterImage: service.data.listImage.src,
   },
 };
 ---
